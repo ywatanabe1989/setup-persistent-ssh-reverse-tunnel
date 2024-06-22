@@ -40,6 +40,13 @@ This repository contains scripts for setting up a persistent SSH reverse tunnel 
    sudo yum install -y autossh
    ```
 
+4. **Run the setup script**:
+   ```bash
+   ./setup-autossh-service.sh -p $PORT -b $BASTION_SERVER -s $SECRET_KEY_PATH
+   # /etc/systemd/system/autossh-tunnel-"$PORT".service is created
+   ```
+
+
 ## Usage
 
 1. **SSH into the Bastion Server**:
