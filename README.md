@@ -30,9 +30,9 @@
 4. Setup the reverse tunnel:
    ```bash
    ./setup-autossh-service.sh -p $PORT -b $BASTION_SERVER -s $SECRET_KEY_PATH
+   # /etc/systemd/system/autossh-tunnel-"$PORT".service is created
    ```
-
-
+   
 5. SSH into the bastion server:
    ```bash
    ssh $BASTION_SERVER
@@ -43,6 +43,15 @@
    PORT=4800 # The designated value
    ssh localhost -p $PORT
    ```
+
+7. Remove the service
+
+``` bash
+sudo systemctl status autossh*.service | grep autossh-tunnel-
+./remove-autossh-service.sh -p "$PORT"
+```
+
+
 
 ## Appendics
 1. Register the client's public key to both the bastion server and the target server to skip password verification step:
