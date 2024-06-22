@@ -4,12 +4,23 @@
 
 This repository contains scripts for setting up a persistent SSH reverse tunnel using autossh. It is designed to maintain a stable connection between a target server and a bastion server.
 
+## Connection Overview
+Diagrams below illustrates the SSH connections established by this setup:
+
+#### Reverse SSH Tunneling
+| Target Server | -> (Reverse SSH Tunneling) -> | Bastion Server|
+
+#### Client Connection After Setup
+| Client | -> | Bastion Server | -> (Port Forwarding) -> | Target Server |
+
+
 ## Prerequisites
 
 - SSH access to both the bastion and target server.
 - sudo privileges on the target server.
 
-## Installation
+
+## Installation (on the target server)
 
 1. **Generate SSH Key**: Without a passphrase for automation.
 
