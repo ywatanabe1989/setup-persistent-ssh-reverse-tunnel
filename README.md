@@ -105,14 +105,14 @@ cat "${SECRET_KEY_PATH}.pub" # copy the contents
 
 - Keep your SSH keys secure and never share your private key. 
 - Ensure appropriate permissions for SSH keys:
-    ``` bash
-    ssh-correct-permissions ()
-    { 
-        chmod 700 ~/.ssh 2> /dev/null;
-        chmod 600 ~/.ssh/* 2> /dev/null;
-        chmod 644 ~/.ssh/*.pub 2> /dev/null;
-        chmod 600 ~/.ssh/config 2> /dev/null
-    }
+``` bash
+ssh-correct-permissions ()
+{ 
+    chmod 700 ~/.ssh 2> /dev/null;
+    chmod 600 ~/.ssh/* 2> /dev/null;
+    chmod 644 ~/.ssh/*.pub 2> /dev/null;
+    chmod 600 ~/.ssh/config 2> /dev/null
+}
 ```
 
 ## Contact
