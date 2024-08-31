@@ -66,7 +66,7 @@ SECRET_KEY_PATH=$HOME/.ssh/id_rsa # Path to your private key
 # Aug 31 22:14:16 HOST autossh[63681]: ssh child pid is 63682
 ```
 
-## Connection Confirmation (From Client of Host)
+## Connection Confirmation (From Client or Host)
 ``` bash
 ssh $BASTION_SERVER # Connect to the bastion server
 ssh localhost -p <YOUR_PORT> # Connect to the Host through the tunnel
