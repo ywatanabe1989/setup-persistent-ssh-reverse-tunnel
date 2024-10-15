@@ -18,6 +18,17 @@ This repository contains scripts for setting up a persistent SSH reverse tunnel 
 ## Installation
 
 #### Host
+
+###### ssh daemon
+``` bash
+sudo apt update
+sudo apt install openssh-server
+sudo service ssh start
+sudo service ssh status
+```
+
+###### Secret key
+
 ```bash
 SECRET_KEY_PATH=$HOME/.ssh/id_rsa
 ssh-keygen -t rsa -b 4096 -f $SECRET_KEY_PATH -N ""
